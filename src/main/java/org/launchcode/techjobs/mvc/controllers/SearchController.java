@@ -28,7 +28,7 @@ public class SearchController extends TechJobsController{
     // TODO #3 - Create a handler to process a search request and render the updated search view.
 
     @RequestMapping(value = "results", method = {RequestMethod.GET, RequestMethod.POST})
-    public String displaySearchResults(@RequestParam String searchType, @RequestParam String searchTerm, Model model ) {
+    public String displaySearchResults( Model model, @RequestParam String searchType, @RequestParam String searchTerm) {
 
         ArrayList<Job> jobs = new ArrayList<Job>();
 
